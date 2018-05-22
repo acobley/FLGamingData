@@ -12,6 +12,8 @@ docker run --name node2 -d -e CASSANDRA_SEEDS="$(docker inspect --format='{{ .Ne
 
 docker exec -it node1 nodetool status
 
+docker stop node1
+docker stop node2
 
 
 
@@ -24,4 +26,4 @@ create columnfamily users (KEY varchar Primary key, password varchar, gender var
 INSERT INTO users (KEY, password) VALUES ('jsmith', 'ch@ngem3a');
 Select * from users;
 INSERT INTO users (KEY, gender) VALUES ('jbrown', 'male');
-INSERT INTO users (KEY, phone) VALUES ('jbrown', '01382 345078');
+exit;
