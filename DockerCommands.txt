@@ -1,3 +1,4 @@
+Docker Commands
 
 docker run  hello-world
 
@@ -10,3 +11,17 @@ docker exec -it node1 nodetool status
 docker run --name node2 -d -e CASSANDRA_SEEDS="$(docker inspect --format='{{ .NetworkSettings.IPAddress }}' node1)" cassandra:latest
 
 docker exec -it node1 nodetool status
+
+
+
+
+CQL Commands
+create keyspace test WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
+describe keyspaces;
+describe keyspace test;
+use test;
+create columnfamily users (KEY varchar Primary key, password varchar, gender varchar) ;
+INSERT INTO users (KEY, password) VALUES ('jsmith', 'ch@ngem3a');
+Select * from users;
+INSERT INTO users (KEY, gender) VALUES ('jbrown', 'male');
+INSERT INTO users (KEY, phone) VALUES ('jbrown', '01382 345078');
