@@ -1,3 +1,12 @@
 
 docker run  hello-world
 
+docker run --name node1 -d cassandra:latest
+
+docker ps
+
+docker exec -it node1 nodetool status
+
+docker run --name node2 -d -e CASSANDRA_SEEDS="$(docker inspect --format='{{ .NetworkSettings.IPAddress }}' node1)" cassandra:latest
+
+docker exec -it node1 nodetool status
