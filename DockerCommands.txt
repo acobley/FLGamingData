@@ -15,7 +15,7 @@ docker exec -it node1 nodetool status
 docker stop node1
 docker stop node2
 
-
+docker exec -it node1 cqlsh
 
 CQL Commands
 create keyspace test WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
