@@ -1,0 +1,16 @@
+INSERT INTO `Customer` (`Name`, `Phone`) VALUES ('Andy', '01383-488576');
+INSERT INTO `Customer` (`Name`, `Phone`) VALUES ('Bill', '01676-413785');
+INSERT INTO `Customer` (`Name`, `Phone`) VALUES ('Sarah', '01330-513968');
+INSERT INTO `Customer` (`Name`, `Phone`) VALUES ('John', '01695-038786');
+INSERT INTO `Customer` (`Name`, `Phone`) VALUES ('Xavier', '0165-1786009');
+
+INSERT INTO `Purchases` (`Customer`, `Date`, `TotalAmount`) VALUES ('1', '2018-3-23', '300');
+INSERT INTO `Purchases` (`Customer`, `Date`, `TotalAmount`) VALUES ('1', '2018-4-01', '250');
+INSERT INTO `Purchases` (`Customer`, `Date`, `TotalAmount`) VALUES ('2', '2018-1-15', '100');
+INSERT INTO `Purchases` (`Customer`, `Date`, `TotalAmount`) VALUES ('3', '2018-2-20', '150');
+INSERT INTO `Purchases` (`Customer`, `Date`, `TotalAmount`) VALUES ('2', '2018-4-3', '200');
+INSERT INTO `Purchases` (`Customer`, `Date`, `TotalAmount`) VALUES ('3', '2018-3-1', '67');
+INSERT INTO `Purchases` (`Customer`, `Date`, `TotalAmount`) VALUES ('1', '2018-1-2', '87');
+INSERT INTO `Purchases` (`Customer`, `Date`, `TotalAmount`) VALUES ('2', '2018-3-17', '51');
+INSERT INTO `Purchases` (`Customer`, `Date`, `TotalAmount`) VALUES ('2', '2018-4-12', '205.3');
+INSERT INTO `Purchases` (`Customer`, `Date`, `TotalAmount`) VALUES ('3', '2018-2-3', '167.15');
