@@ -1,0 +1,12 @@
+CREATE TABLE .`Customer` (
+  `idCustomer` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(45) NULL,
+  `Phone` VARCHAR(45) NULL,
+  PRIMARY KEY (`idCustomer`));
+
+CREATE TABLE .`Purchases` (
+  `idPurchases` INT NOT NULL AUTO_INCREMENT,
+  `Customer` INT NOT NULL,
+  `Date` DATE NULL,
+  `TotalAmount` FLOAT NULL,
+  PRIMARY KEY (`idPurchases`));
