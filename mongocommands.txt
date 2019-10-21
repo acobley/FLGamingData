@@ -1,0 +1,24 @@
+docker run -d -e MONGO_INITDB_ROOT_USERNAME='restheart' -e MONGO_INITDB_ROOT_PASSWORD='R3ste4rt!'  --name mongodb -v "$PWD/data:/data/db" -v "$PWD/import:/home" mongo:3.6 --bind_ip_all --auth
+
+docker  exec  mongodb mongoimport  -u restheart -p R3ste4rt! --authenticationDatabase admin --db myflix --collection films --drop --file /home/film.json
+
+docker exec -i -t mongodb bash
+
+mongo  -u restheart -p R3ste4rt! --authenticationDatabase admin
+
+use myflix
+show collections
+
+db.films.find()
+db.films.find().pretty()
+db.films.find({"video.studio":null}).pretty()
+
+db.films.find({"video.Players":{$exists:true}}).pretty()
+
+db.films.find({"video.studio":{$exists:true}}).pretty()
+
+db.films.find({"video.Players":"Carrie Henn"}).pretty()
+
+db.films.find({"video.studio":{$exists:true}}).pretty()
+
+db.films.find({"video.Name":/Alien/}).pretty()
