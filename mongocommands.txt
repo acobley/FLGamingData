@@ -11,6 +11,9 @@ show collections
 
 db.films.find()
 db.films.find().pretty()
+
+db.films.find({"video.Name":"Aliens"}).pretty()
+
 db.films.find({"video.studio":null}).pretty()
 
 db.films.find({"video.Players":{$exists:true}}).pretty()
