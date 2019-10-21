@@ -1,0 +1,14 @@
+docker run --name hadoop-test -p 50070:50070 -p 8088:8088 -p 10020:10020 -v "$PWD/data:/home" -it acobley/pig-hive /etc/bootstrap.sh -bash
+
+Hadoop is in /usr/local/hadoop
+cd /usr/local/hadoop/bin
+./hadoop fs -ls
+./hadoop fs -mkdir examples
+./hadoop fs -put /home/*.* examples
+./hadoop fs –ls examples
+./hadoop fs -cat examples/m100_5.txt
+
+hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar wordcount examples/shakey.txt out 
+hadoop fs -ls
+./hadoop fs -ls out
+./hadoop fs -cat out/part-r-00000
