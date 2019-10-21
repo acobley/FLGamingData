@@ -5,7 +5,7 @@ cd /usr/local/hadoop/bin
 ./hadoop fs -ls
 ./hadoop fs -mkdir examples
 ./hadoop fs -put /home/*.* examples
-./hadoop fs –ls examples
+./hadoop fs -ls  examples
 ./hadoop fs -cat examples/m100_5.txt
 
 hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar wordcount examples/shakey.txt out 
